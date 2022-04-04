@@ -1,10 +1,15 @@
 package utils;
 
-public class Pair<T1, T2> {
-    private T1 param1;
-    private T2 param2;
-    Pair(T1 type1,T2 type2){
-        param1 = type1;
-        param2 = type2;
+import evolution.genome.Genome;
+
+public record Pair(Genome gen1, Genome gen2) {
+    @Override
+    public Genome gen1() {
+        return gen1;
+    }
+
+    @Override
+    public Genome gen2() {
+        return gen2;
     }
 }
